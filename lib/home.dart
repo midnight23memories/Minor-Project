@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'clipper.dart';
+import 'background.dart';
 
 class Home extends StatefulWidget {
   @override
