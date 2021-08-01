@@ -79,7 +79,7 @@ Future<bool> _exitApp(BuildContext context) {
                 onPressed: () {
                   SystemChannels.platform.invokeMethod('SystemNavigator.pop');
                 },
-                child: Text('Yes'),
+                child: Text('Yes,Logout'),
               ),
             ],
           ),
