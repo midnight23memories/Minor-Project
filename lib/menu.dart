@@ -63,3 +63,26 @@ class FirstRoute extends Stateless Widget{
  );
 }
 }
+Future<bool> _exitApp(BuildContext context) {
+    return showDialog(
+          context: context,
+          child: AlertDialog(
+            title: Text('Are you sure you want to logout?'),
+            actions: <Widget>[
+              FlatButton(
+                onPressed: () {
+                  Navigator.of(context).pop(false);
+                },
+                child: Text('No'),
+              ),
+              FlatButton(
+                onPressed: () {
+                  SystemChannels.platform.invokeMethod('SystemNavigator.pop');
+                },
+                child: Text('Yes'),
+              ),
+            ],
+          ),
+        ) ??
+        false;
+  }
