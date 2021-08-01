@@ -1,35 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'home.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(new MyApp());
+  
 }
 
 class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-     SystemChrome.setPreferredOrientations([
-        DeviceOrientation.portraitUp,
-        DeviceOrientation.portraitDown,
-      ]);
     return MaterialApp(
       title: 'Flutter Demo',
-      debugShowCheckModeBanner : false,     
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-       hintColor: Color(0xFFC0F0E8),
+          hintColor: Color(0xFFC0F0E8),
           primaryColor: Color(0xFF80E1D1),
-          canvasColor: Colors.transparent),
           fontFamily: "Montserrat",
+          canvasColor: Colors.transparent),
       home: Home(),
     );
   }
-}
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
-
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
 }
