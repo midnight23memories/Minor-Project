@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'clipper.dart';
 import 'menu.dart';
 class Home extends StatefulWidget {
   @override
